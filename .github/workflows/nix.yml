@@ -70,7 +70,7 @@ jobs:
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         uses: cachix/cachix-action@v15
         with:
-          name: fjordlauncher
+          name: lunaislazier
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - name: Run Flake checks
@@ -80,9 +80,9 @@ jobs:
       - name: Build debug package
         if: ${{ env.DEBUG }}
         run: |
-          nix build --print-build-logs .#fjordlauncher-debug
+          nix build --print-build-logs .#shatteredprism-debug
 
       - name: Build release package
         if: ${{ !env.DEBUG }}
         run: |
-          nix build --print-build-logs .#fjordlauncher
+          nix build --print-build-logs .#shatteredprism

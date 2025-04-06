@@ -57,6 +57,6 @@ jobs:
       - name: Build Flatpak
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: FjordLauncher-${{ runner.os }}-${{ env.VERSION }}-Flatpak.flatpak
-          manifest-path: flatpak/org.fjordlauncher.FjordLauncher.yml
+          bundle: ShatteredPrism-${{ runner.os }}-${{ env.VERSION }}-Flatpak.flatpak
+          manifest-path: flatpak/org.lunaislazier.ShatteredPrism.yml
           arch: ${{ matrix.arch }}
