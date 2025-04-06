@@ -4,6 +4,9 @@ MD012: false
 # MD013/line-length - Line length
 MD013: false
 
+# MD022/blanks-around-headings
+MD022: false
+
 # MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
 MD024:
   siblings-only: true
