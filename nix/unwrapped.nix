@@ -45,7 +45,7 @@ in
 
 stdenv.mkDerivation {
   pname = "shatteredprism-unwrapped";
-  version = "1.7-unstable-${date}";
+  version = "1.8-unstable-${date}";
 
   src = lib.fileset.toSource {
     root = ../.;
