@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/documents">
+        <file>../../../COPYING.md</file>
+        <file>login-qr.svg</file>
+    </qresource>
+</RCC>
+
