@@ -1,6 +1,6 @@
 #pragma once
 
-#define REPOSITORY_VERSION QString("https://git.onimai.ru/ONIMAI-SMP/multimc-pack/raw/branch/main/")
+#define REPOSITORY_VERSION QString("https://mods.minwix.net/")
 
 #include <functional>
 
