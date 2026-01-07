@@ -120,7 +120,7 @@ stdenv.mkDerivation {
       their own mods, texture packs, saves, etc) and helps you manage them and
       their associated options with a simple interface.
     '';
-    homepage = "https://github.com/lunaislazier/ShatteredPrism";
+    homepage = "https://github.com/Noctilune/ShatteredPrism";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [
       lunaislazier

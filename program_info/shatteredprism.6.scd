@@ -69,11 +69,11 @@ variables, besides other common Qt variables:
 
 # BUGS
 
-https://github.com/lunaislazier/ShatteredPrism/issues
+https://github.com/Noctilune/ShatteredPrism/issues
 
 # RESOURCES
 
-GitHub: https://github.com/lunaislazier/ShatteredPrism
+GitHub: https://github.com/Noctilune/ShatteredPrism
 
 # AUTHORS
 

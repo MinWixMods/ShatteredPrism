@@ -22,7 +22,7 @@ Example (NixOS):
 
 ### Installing the package directly
 
-After adding `github:lunaislazier/ShatteredPrism` to your flake inputs, you can access the flake's `packages` output.
+After adding `github:Noctilune/ShatteredPrism` to your flake inputs, you can access the flake's `packages` output.
 
 Example:
 
@@ -32,7 +32,7 @@ Example:
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     shatteredprism = {
-      url = "github:lunaislazier/ShatteredPrism";
+      url = "github:Noctilune/ShatteredPrism";
 
       # Optional: Override the nixpkgs input of shatteredprism to use the same revision as the rest of your flake
       # Note that this may break the reproducibility mentioned above, and you might not be able to access the binary cache
@@ -77,7 +77,7 @@ Example:
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     shatteredprism = {
-      url = "github:lunaislazier/ShatteredPrism";
+      url = "github:Noctilune/ShatteredPrism";
 
       # Optional: Override the nixpkgs input of shatteredprism to use the same revision as the rest of your flake
       # Note that this may break the reproducibility mentioned above, and you might not be able to access the binary cache
@@ -114,11 +114,11 @@ You can simply call the default package of this flake.
 Example:
 
 ```shell
-nix run github:lunaislazier/ShatteredPrism
+nix run github:Noctilune/ShatteredPrism
 
-nix shell github:lunaislazier/ShatteredPrism
+nix shell github:Noctilune/ShatteredPrism
 
-nix profile install github:lunaislazier/ShatteredPrism
+nix profile install github:Noctilune/ShatteredPrism
 ```
 
 ## Installing a development release (without flakes)
@@ -151,7 +151,7 @@ Example:
 {
   environment.systemPackages = [
     (import (
-      builtins.fetchTarball "https://github.com/ShatteredPrism/ShatteredPrism/archive/develop.tar.gz"
+      builtins.fetchTarball "https://github.com/Noctilune/ShatteredPrism/archive/develop.tar.gz"
     )).packages.${pkgs.system}.shatteredprism
   ];
 }
@@ -169,7 +169,7 @@ Example:
 {
   nixpkgs.overlays = [
     (import (
-      builtins.fetchTarball "https://github.com/ShatteredPrism/ShatteredPrism/archive/develop.tar.gz"
+      builtins.fetchTarball "https://github.com/Noctilune/ShatteredPrism/archive/develop.tar.gz"
     )).overlays.default
   ];
 
@@ -184,7 +184,7 @@ You can add this repository as a channel and install its packages that way.
 Example:
 
 ```shell
-nix-channel --add https://github.com/lunaislazier/ShatteredPrism/archive/develop.tar.gz shatteredprism
+nix-channel --add https://github.com/Noctilune/ShatteredPrism/archive/develop.tar.gz shatteredprism
 
 nix-channel --update shatteredprism
 
