@@ -9,7 +9,7 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
 
     libnbtplusplus = {
       url = "github:PrismLauncher/libnbtplusplus";
@@ -96,7 +96,7 @@
             # Required to use script-based makeWrapper below
             strictDeps = true;
 
-            # We don't need/want the unwrapped Fjord package
+            # We don't need/want the unwrapped Shattered package
             paths = [ ];
 
             nativeBuildInputs = old.nativeBuildInputs or [ ] ++ [
@@ -114,6 +114,8 @@
 
         {
           default = pkgs.mkShell {
+            name = "shattered-prism";
+
             inputsFrom = [ packages'.shatteredprism-unwrapped ];
 
             packages = with pkgs; [
