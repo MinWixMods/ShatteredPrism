@@ -10,7 +10,7 @@ svg2png() {
 }
 
 if command -v "svgo"; then
-    svgo org.lunaislazier.ShatteredPrism.Source.svg -o org.lunaislazier.ShatteredPrism.svg
+    svgo org.Noctilune.ShatteredPrism.Source.svg -o org.Noctilune.ShatteredPrism.svg
 else
     echo 'ERROR: svgo not in $PATH'
 fi
@@ -19,13 +19,13 @@ if command -v "inkscape" && command -v "icotool"; then
     # Windows ICO
     d=$(mktemp -d)
 
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_16.png" 16 16
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_24.png" 24 24
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_32.png" 32 32
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_48.png" 48 48
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_64.png" 64 64
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_128.png" 128 128
-    svg2png org.lunaislazier.ShatteredPrism.svg "$d/shatteredprism_256.png" 256 256
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_16.png" 16 16
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_24.png" 24 24
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_32.png" 32 32
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_48.png" 48 48
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_64.png" 64 64
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_128.png" 128 128
+    svg2png org.Noctilune.ShatteredPrism.svg "$d/shatteredprism_256.png" 256 256
 
     rm shatteredprism.ico && icotool -o shatteredprism.ico -c \
         "$d/shatteredprism_256.png"  \
@@ -48,7 +48,7 @@ if command -v "inkscape" && command -v "magick"; then
 
     mkdir -p "$d"
 
-    svg2png org.lunaislazier.ShatteredPrism.bigsur.svg "$d/icon_512x512@2.png" 1024 1024
+    svg2png org.Noctilune.ShatteredPrism.bigsur.svg "$d/icon_512x512@2.png" 1024 1024
     magick convert "$d/icon_512x512@2.png" -resize 16x16 "$d/icon_16x16.png"
     magick convert "$d/icon_512x512@2.png" -resize 32x32 "$d/icon_16x16@2.png"
     magick convert "$d/icon_512x512@2.png" -resize 32x32 "$d/icon_32x32.png"
@@ -64,4 +64,4 @@ else
 fi
 
 # replace icon in themes
-cp -v org.lunaislazier.Shatteredprism.svg "../launcher/resources/multimc/scalable/launcher.svg"
+cp -v org.Noctilune.Shatteredprism.svg "../launcher/resources/multimc/scalable/launcher.svg"
