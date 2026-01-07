@@ -23,8 +23,8 @@ This project was originally a direct fork of upstream Prism, but spent most of i
 
 ## Installation
 
-- Downloads can be found on the [GitHub Releases](https://github.com/LunaisLazier/ShatteredPrism/releases).
-- Last build status can be found in the [GitHub Actions](https://github.com/LunaisLazier/ShatteredPrism/actions) tab (this also includes the pull requests status).
+- Downloads can be found on the [GitHub Releases](https://github.com/Noctilune/ShatteredPrism/releases).
+- Last build status can be found in the [GitHub Actions](https://github.com/Noctilune/ShatteredPrism/actions) tab (this also includes the pull requests status).
 
 ## Community & Support
 

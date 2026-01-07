@@ -58,5 +58,5 @@ jobs:
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
           bundle: ShatteredPrism-${{ runner.os }}-${{ env.VERSION }}-Flatpak.flatpak
-          manifest-path: flatpak/org.lunaislazier.ShatteredPrism.yml
+          manifest-path: flatpak/org.Noctilune.ShatteredPrism.yml
           arch: ${{ matrix.arch }}
