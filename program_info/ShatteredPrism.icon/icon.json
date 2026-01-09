@@ -1,28 +1,16 @@
 {
-  "color-space-for-untagged-svg-colors" : "display-p3",
   "fill" : {
     "solid" : "extended-gray:1.00000,1.00000"
   },
+  "groups" : [
     {
-      "blur-material-specializations" : [
-        {
-          "value" : 0.5
-        },
-        {
-          "appearance" : "dark",
-          "value" : null
-        }
-      ],
       "layers" : [
         {
           "blend-mode" : "normal",
-          "fill" : "automatic",
-          "glass" : true,
-          "hidden" : false,
           "image-name" : "prism.svg",
           "name" : "prism",
           "position" : {
-            "scale" : 20.29,
+            "scale" : 3.25,
             "translation-in-points" : [
               0,
               0
@@ -30,19 +18,21 @@
           }
         }
       ],
+      "lighting" : "combined",
       "shadow" : {
         "kind" : "neutral",
         "opacity" : 0.5
       },
       "translucency" : {
-        "enabled" : false,
+        "enabled" : true,
         "value" : 0.5
       }
     }
   ],
   "supported-platforms" : {
-    "squares" : [
-      "macOS"
-    ]
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
   }
 }
