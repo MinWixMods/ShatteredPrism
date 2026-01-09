@@ -73,7 +73,7 @@ runs:
         fi
 
         sudo codesign --sign "$APPLE_CODESIGN_ID" --deep --force --entitlements "$ENTITLEMENTS_FILE" --options runtime "ShatteredPrism.app/Contents/MacOS/shatteredprism"
-        mv "ShatteredPrism.app" "ShatteredPrism.app"
+        mv "ShatteredPrism.app" "Shattered Prism.app"
 
     - name: Notarize
       shell: bash
@@ -83,18 +83,18 @@ runs:
         cd ${{ env.INSTALL_DIR }}
 
         if [ -n '${{ inputs.apple-notarize-password }}' ]; then
-          ditto -c -k --sequesterRsrc --keepParent "ShatteredPrism.app" ../ShatteredPrism.zip
+          ditto -c -k --sequesterRsrc --keepParent "Shattered Prism.app" ../ShatteredPrism.zip
           xcrun notarytool submit ../ShatteredPrism.zip \
             --wait --progress \
             --apple-id '${{ inputs.apple-notarize-apple-id }}' \
             --team-id '${{ inputs.apple-notarize-team-id }}' \
             --password '${{ inputs.apple-notarize-password }}'
 
-          xcrun stapler staple "ShatteredPrism.app"
+          xcrun stapler staple "Shattered Prism.app"
         else
           echo ":warning: Skipping notarization as credentials are not present." >> $GITHUB_STEP_SUMMARY
         fi
-        ditto -c -k --sequesterRsrc --keepParent "ShatteredPrism.app" ../ShatteredPrism.zip
+        ditto -c -k --sequesterRsrc --keepParent "Shattered Prism.app" ../ShatteredPrism.zip
 
     - name: Make Sparkle signature
       shell: bash
