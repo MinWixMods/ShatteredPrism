@@ -1,8 +1,8 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource prefix="/">
-<<<<<<<< HEAD:program_info/fjordlauncher.qrc
-        <file>org.unmojang.FjordLauncher.svg</file>
+<<<<<<<< HEAD:program_info/shatteredprism.qrc
+        <file>org.Noctilune.ShatteredPrism.svg</file>
 |||||||| 78e24962f:program_info/prismlauncher.qrc
         <file>org.prismlauncher.PrismLauncher.svg</file>
 ========

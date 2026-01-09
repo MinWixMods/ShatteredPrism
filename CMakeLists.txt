@@ -205,10 +205,10 @@ set(Launcher_TRANSLATIONS_URL "https://hosted.weblate.org/projects/prismlauncher
 set(Launcher_TRANSLATION_FILES_URL "https://i18n.prismlauncher.org/" CACHE STRING "URL for the translations files.")
 
 # Matrix Space
-set(Launcher_MATRIX_URL "https://matrix.to/#/!qaNOVygNKbVoDakSEX:matrix.org?via=matrix.org&via=w33b.cloud&via=tchncs.de" CACHE STRING "URL to the Matrix Space")
+set(Launcher_MATRIX_URL "" CACHE STRING "URL to the Matrix Space")
 
 # Discord URL
-set(Launcher_DISCORD_URL "" CACHE STRING "URL for the Discord guild.")
+set(Launcher_DISCORD_URL "https://discord.gg/nr5ece9kFe" CACHE STRING "URL for the Discord guild.")
 
 # Subreddit URL
 set(Launcher_SUBREDDIT_URL "" CACHE STRING "URL for the subreddit.")
