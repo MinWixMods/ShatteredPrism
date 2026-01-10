@@ -88,7 +88,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ github.ref }}
-          name: ShatteredPrism ${{ env.VERSION }}
+          name: Shattered Prism ${{ env.VERSION }}
           draft: true
           prerelease: false
           fail_on_unmatched_files: true
