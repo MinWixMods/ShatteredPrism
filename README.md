@@ -28,7 +28,7 @@ This project was originally a direct fork of upstream Prism, but spent most of i
 
 ## Community & Support
 
-Feel free to create a GitHub issue if you find a bug or want to suggest something.
+Feel free to create a GitHub issue, or reach out in our [Discord](https://discord.com/invite/nr5ece9kFe).
 
 For any other project-related inquiries, reach me at either my [Bluesky](https://bsky.app/profile/moonlitvtuber.org) or [Twitter](https://twitter.com/lunasc_ope).
 
