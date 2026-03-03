@@ -5,7 +5,8 @@
 #include <QString>
 #include <fstream>
 
-inline QString getRepository(){
+inline QString getRepository()
+{
     QFile file("repository.json");
     QFileInfo fileInfo(file.fileName());
     qDebug() << "Load" << file.fileName() << "Full path:" << fileInfo.absoluteFilePath();

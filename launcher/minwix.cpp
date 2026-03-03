@@ -64,7 +64,7 @@ void minWixLoadMainWidget(MainWindow* mainWindow)
             }
         }
 
-        auto *manager = new QNetworkAccessManager(mainWindow);
+        auto* manager = new QNetworkAccessManager(mainWindow);
 
         QObject::connect(manager, &QNetworkAccessManager::finished, mainWindow, [mainWindow, manager](QNetworkReply* reply) {
             if (reply->error() == QNetworkReply::NoError) {
