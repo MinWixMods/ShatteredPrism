@@ -10,6 +10,12 @@ jobs:
   build_release:
     name: Build Release
     uses: ./.github/workflows/build.yml
+    permissions:
+      contents: read
+      # Required for Azure Trusted Signing
+      id-token: write
+      # Required for vcpkg binary cache
+      packages: write
     with:
       build-type: Release
       environment: Release
@@ -18,6 +24,8 @@ jobs:
   create_release:
     needs: build_release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
