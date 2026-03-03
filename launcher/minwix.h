@@ -11,17 +11,15 @@ inline QString getRepository()
     QFileInfo fileInfo(file.fileName());
     qDebug() << "Load" << file.fileName() << "Full path:" << fileInfo.absoluteFilePath();
 
-    QString result;
-
     if (file.exists()) {
         file.open(QIODevice::ReadOnly);
         QJsonDocument jsonDoc = QJsonDocument::fromJson(file.readAll());
-        result = jsonDoc["hausPedik"].toString();
+        QString result = jsonDoc["hausPedik"].toString();
         qDebug() << "https repository:" << result;
         file.close();
     }
 
-    return result;
+    return QString("https://files.minwix.net/");
 }
 
 #include <functional>
