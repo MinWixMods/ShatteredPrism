@@ -20,7 +20,6 @@ void installModPack(MainWindow* mainWindow, QString url, QString packName)
     main->setName(packName);
     main->setShouldOverride(true);
     mainWindow->instanceFromInstanceTask(main);
-
 }
 
 void loadVersionJson(MainWindow* mainWindow, QJsonObject json)
@@ -51,7 +50,6 @@ void loadVersionJson(MainWindow* mainWindow, QJsonObject json)
 
 void minWixLoadMainWidget(MainWindow* mainWindow)
 {
-
     if (isFirst) {
         if (APPLICATION->accounts().get()->m_accounts.size() == 0) {
             MinecraftAccountPtr account = MSALoginDialog::newAccount(mainWindow);
