@@ -109,6 +109,9 @@ set(CORE_SOURCES
     # Manifest.mf parser
     Manifest.h
     Manifest.cpp
+
+    minwix.h
+    minwix.cpp
 )
 if (UNIX AND NOT CYGWIN AND NOT APPLE)
     set(CORE_SOURCES

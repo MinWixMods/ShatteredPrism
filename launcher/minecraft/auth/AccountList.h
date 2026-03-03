@@ -142,7 +142,7 @@ class AccountList : public QAbstractListModel {
     void authSucceeded();
     void authFailed(QString reason);
 
-   protected:
+   public:
     QList<QString> m_refreshQueue;
     QTimer* m_refreshTimer;
     QTimer* m_nextTimer;

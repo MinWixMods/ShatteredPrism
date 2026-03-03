@@ -51,6 +51,8 @@ class InstanceTask : public Task, public InstanceName {
 
     QString originalInstanceID() const { return m_original_instance_id; };
 
+    void setShouldOverride(bool should) {m_override_existing = should;}
+
    protected:
     void setOverride(bool override, QString instance_id_to_override = {})
     {

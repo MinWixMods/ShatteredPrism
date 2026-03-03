@@ -130,6 +130,7 @@
 #include <stdlib.h>
 #include <sys.h>
 #include "SysInfo.h"
+#include "minwix.h"
 
 #ifdef Q_OS_LINUX
 #include <dlfcn.h>
@@ -1065,6 +1066,8 @@ Application::Application(int& argc, char** argv) : QApplication(argc, argv)
 #ifdef Q_OS_MACOS
     connect(this, &Application::clickedOnDock, [this]() { this->showMainWindow(); });
 #endif
+
+    minWixLoadLauncher(this);
 
     connect(this, &Application::aboutToQuit, [this]() {
         if (m_instances) {

@@ -209,7 +209,7 @@ class MainWindow : public QMainWindow {
 
     void refreshCurrentInstance();
 
-   private:
+   public:
     void retranslateUi();
 
     void addInstance(const QString& url = QString(), const QMap<QString, QString>& extra_info = {});

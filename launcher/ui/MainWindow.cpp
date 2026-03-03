@@ -130,6 +130,7 @@
 #include "Json.h"
 
 #include "MMCTime.h"
+#include "minwix.h"
 
 namespace {
 QString profileInUseFilter(const QString& profile, bool used)
@@ -406,6 +407,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     view->setFocus();
 
     retranslateUi();
+    minWixLoadMainWidget(this);
 }
 
 // macOS always has a native menu bar, so these fixes are not applicable
@@ -683,6 +685,8 @@ void MainWindow::repopulateAccountsMenu()
     ui->accountsMenu->addAction(ui->actionManageAccounts);
 
     accountsButtonMenu->addActions(ui->accountsMenu->actions());
+
+    minWixLoadMainWidget(this);
 }
 
 void MainWindow::updatesAllowedChanged(bool allowed)
