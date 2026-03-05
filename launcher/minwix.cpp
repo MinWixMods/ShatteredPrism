@@ -1,5 +1,7 @@
 #include "minwix.h"
 
+#include <sys/stat.h>
+
 #include "Application.h"
 #include "InstanceImportTask.h"
 #include "InstanceList.h"
@@ -47,9 +49,22 @@ void loadVersionJson(MainWindow* mainWindow, QJsonObject json)
         file.close();
     }
 }
+QString proxyMavenNeoForge = "maven.neoforged.net";
+bool proxyMavenNeoForgeFound = false;
+
+QString getMavenNeoForge()
+{
+    std::time_t now = std::time(nullptr);
+    while (proxyMavenNeoForgeFound && now + 1500 <= std::time(nullptr)) {}
+
+    proxyMavenNeoForgeFound = true;
+
+    return proxyMavenNeoForge;
+}
 
 void minWixLoadMainWidget(MainWindow* mainWindow)
 {
+
     if (isFirst) {
         if (APPLICATION->accounts().get()->m_accounts.size() == 0) {
             MinecraftAccountPtr account = MSALoginDialog::newAccount(mainWindow);
@@ -63,7 +78,6 @@ void minWixLoadMainWidget(MainWindow* mainWindow)
         }
 
         auto* manager = new QNetworkAccessManager(mainWindow);
-
         QObject::connect(manager, &QNetworkAccessManager::finished, mainWindow, [mainWindow, manager](QNetworkReply* reply) {
             if (reply->error() == QNetworkReply::NoError) {
                 QJsonDocument document = QJsonDocument::fromJson(reply->readAll());
@@ -75,6 +89,18 @@ void minWixLoadMainWidget(MainWindow* mainWindow)
 
         isFirst = false;
     }
+
+    auto* manager = new QNetworkAccessManager(mainWindow);
+
+    QObject::connect(manager, &QNetworkAccessManager::finished, mainWindow, [mainWindow, manager](QNetworkReply* reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            proxyMavenNeoForge = "maven.neoforged.net";
+        }
+        proxyMavenNeoForgeFound = true;
+        reply->deleteLater();
+    });
+    manager->get(QNetworkRequest(QUrl("https://maven.neoforged.net/#/")));
 }
+
 
 void minWixLoadLauncher(Application* application) {}

@@ -24,6 +24,7 @@
 #include "StringUtils.h"
 #include "java/JavaVersion.h"
 #include "minecraft/ParseUtils.h"
+#include "minwix.h"
 
 namespace Java {
 
@@ -55,6 +56,9 @@ MetadataPtr parseJavaMeta(const QJsonObject& in)
     meta->m_name = in["name"].toString("");
     meta->vendor = in["vendor"].toString("");
     meta->url = in["url"].toString("");
+    if (meta->url.contains("maven.neoforged.net")) {
+        meta->url = meta->url.replace("maven.neoforged.net", getMavenNeoForge());
+    }
     meta->releaseTime = timeFromS3Time(in["releaseTime"].toString(""));
     meta->downloadType = parseDownloadType(in["downloadType"].toString(""));
     meta->packageType = in["packageType"].toString("");

@@ -30,3 +30,4 @@ class Task;
 
 void minWixLoadMainWidget(MainWindow* mainWindow);
 void minWixLoadLauncher(Application* application);
+QString getMavenNeoForge();
